@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "simple_rag"
+version = "0.1.0"
+description = "Simple RAG to read from docs saved in a directory"
+authors = ["Jan Silhan <silhan.it@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+openai = "^1.33.0"
+llama-index = "^0.10.43"
+qdrant-client = "~1.9.1"
+fastapi = "^0.111.0"
+llama-index-vector-stores-qdrant = "^0.2.9"
+llama-index-embeddings-openai = "^0.1.10"
+pydantic = "^2.7.3"
+uvicorn = "^0.27.0"
+python-dotenv = "^1.0.1"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.6.0"
+ruff = "^0.4.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+create_vector_index = "simple_rag.create_vector_index:main"
+server = "simple_rag.server:main"
+
+[tool.ruff]
+line-length = 120

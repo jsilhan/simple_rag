@@ -1,0 +1,14 @@
+.DS_Store
+.DS_Store?
+.Trashes
+.env
+.idea/
+.vscode/
+.mypy_cache
+.ruff_cache
+__pycache__
+*.pyc
+*.mo
+saved_docs_db/
+storage/
+data/
